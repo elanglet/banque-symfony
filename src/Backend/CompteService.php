@@ -5,7 +5,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Compte;
 use App\Entity\Client;
 
-class ClientService
+class CompteService
 {
 
     private EntityManagerInterface $em;
