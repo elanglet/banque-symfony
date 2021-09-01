@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Récupération du code') {
+            steps {
+                git url: 'https://github.com/elanglet/banque-symfony', branch: 'main'
+            }
+        }
+        stage('Construction du projet') {
+            steps {
+                sh 'composer install'
+            }
+        }
+        stage('Exécution des tests') {
+            steps {
+                sh './vendor/bin/phpunit --log-junit var/log/phpunit.xml'
+            }
+        }
+        stage('Publication des tests') {
+            steps {
+                junit 'var/log/phpunit.xml'
+            }
+        }
+    }
+}
