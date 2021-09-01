@@ -68,7 +68,7 @@ class Compte
 
     public function setClient(?Client $client): self
     {
-        $this->idclient = $client;
+        $this->client = $client;
 
         return $this;
     }
