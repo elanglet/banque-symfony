@@ -41,6 +41,13 @@ class Compte
     {
         return $this->numero;
     }
+    
+    public function setNumero(int $numero): self
+    {
+        $this->numero = $numero;
+        
+        return $this;
+    }
 
     public function getSolde(): ?string
     {

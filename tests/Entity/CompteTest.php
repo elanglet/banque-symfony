@@ -12,6 +12,7 @@ class CompteTest extends TestCase
     public function setUp(): void 
     {
         $this->compte = new Compte();
+        $this->compte->set
     }
     
     public function testSomething(): void
