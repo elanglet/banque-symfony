@@ -35,7 +35,7 @@ class Compte
      *   @ORM\JoinColumn(name="idclient", referencedColumnName="id")
      * })
      */
-    private $idclient;
+    private $client;
 
     public function getNumero(): ?int
     {
@@ -54,14 +54,14 @@ class Compte
         return $this;
     }
 
-    public function getIdclient(): ?Client
+    public function getClient(): ?Client
     {
-        return $this->idclient;
+        return $this->client;
     }
 
-    public function setIdclient(?Client $idclient): self
+    public function setClient(?Client $client): self
     {
-        $this->idclient = $idclient;
+        $this->idclient = $client;
 
         return $this;
     }
