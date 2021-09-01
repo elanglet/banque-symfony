@@ -18,3 +18,12 @@
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+
+
+
+###> IDE ###
+/.buildpath
+/.project
+/.settings/
+###< IDE ###
+
