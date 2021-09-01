@@ -15,7 +15,7 @@ WORKDIR /build
 
 RUN curl -O https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_linux-x64_bin.tar.gz && \
     curl -O https://mirroir.wptheme.fr/apache/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52.tar.gz && \
-	curl -O https://get.jenkins.io/war-stable/2.303.1/jenkins.war && \
+	curl -OL https://updates.jenkins-ci.org/latest/jenkins.war && \
 	tar xzf openjdk-16.0.2_linux-x64_bin.tar.gz && \
     tar xzf apache-tomcat-9.0.52.tar.gz && \
 
@@ -31,7 +31,7 @@ RUN curl -O https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534d
 	mkdir /jenkins-data
 
 ENV JAVA_HOME=/usr/local/jdk
-ENV JAVA_OPTS=-Djava.awt.headless=true 
+ENV JAVA_OPTS='-Djava.awt.headless=true -Dfile.encoding=UTF8'
 ENV CATALINA_HOME=/usr/local/tomcat
 ENV PATH=/usr/local/tomcat/bin:$PATH
 ENV JENKINS_HOME=/jenkins-data
