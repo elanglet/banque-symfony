@@ -7,7 +7,7 @@ use Doctrine\ORM\EntityManagerInterface;
 class ClientService
 {
 
-    private EntityManagerInterface $em;
+    private $em;
 
     public function __construct(EntityManagerInterface $em)
     {

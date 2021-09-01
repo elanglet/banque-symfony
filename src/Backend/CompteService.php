@@ -8,7 +8,7 @@ use App\Entity\Client;
 class CompteService
 {
 
-    private EntityManagerInterface $em;
+    private $em;
 
     public function __construct(EntityManagerInterface $em)
     {
