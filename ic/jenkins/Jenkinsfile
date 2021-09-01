@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Récupération du code') {
+        stage('RÃ©cupÃ©ration du code') {
             steps {
                 git url: 'https://github.com/elanglet/banque-symfony', branch: 'main'
             }
@@ -12,7 +12,7 @@ pipeline {
                 sh 'composer install'
             }
         }
-        stage('Exécution des tests') {
+        stage('ExÃ©cution des tests') {
             steps {
                 sh './vendor/bin/phpunit --log-junit var/log/phpunit.xml'
             }
