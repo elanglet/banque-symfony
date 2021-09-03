@@ -6,8 +6,40 @@ use PHPUnit\Framework\TestCase;
 
 class ClientServiceUnitTest extends TestCase
 {
-    public function testSomething(): void
+    private $clientService;
+    
+    public function setUp(): void
     {
-        $this->assertTrue(true);
+        
+    }
+    
+    public function testAjouterClient(): void
+    {
+
+    }
+    
+    public function testModifierClient(): void
+    {
+
+    }
+    
+    public function testSupprimerClient(): void
+    {
+
+    }
+    
+    public function testRechercherTousLesClients(): void
+    {
+
+    }
+    
+    public function testRechercherClientParId(): void
+    {
+
+    }
+    
+    public function testRechercherClientsParNomEtPrenom(): void
+    {
+
     }
 }
