@@ -4,7 +4,7 @@ namespace App\Tests\Business;
 
 use PHPUnit\Framework\TestCase;
 
-class BanqueBusinessTest extends TestCase
+class BanqueBusinessUnitTest extends TestCase
 {
     public function testSomething(): void
     {

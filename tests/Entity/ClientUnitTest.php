@@ -4,7 +4,7 @@ namespace App\Tests\Entity;
 use PHPUnit\Framework\TestCase;
 use App\Entity\Client;
 
-class ClientTest extends TestCase
+class ClientUnitTest extends TestCase
 {
 
     private $client;

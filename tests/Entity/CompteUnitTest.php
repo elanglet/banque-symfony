@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 use App\Entity\Compte;
 use App\Entity\Client;
 
-class CompteTest extends TestCase
+class CompteUnitTest extends TestCase
 {
     private $compte;
     
