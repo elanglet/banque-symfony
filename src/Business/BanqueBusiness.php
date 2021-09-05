@@ -20,25 +20,29 @@ class BanqueBusiness
     {
         try {
             
-        } catch (\Exception $e) {
-        }    
+        } 
+        catch (\Exception $e) {
+        
+        }
     }
-    
     
     public function mesComptes(int $idClient) : array
     {
         try {
             
-        } catch (\Exception $e) {
+        }
+        catch (\Exception $e) {
+            
         }
     }
-    
     
     public function virement(int $numeroDebit, int $numeroCredit, float $montant) : void
     {
         try {
             
-        } catch (\Exception $e) {
+        }
+        catch (\Exception $e) {
+            
         }
     }
 }
