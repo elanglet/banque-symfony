@@ -1,20 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ComptesController!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+	<div class="container" id="main">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/SandBox/Banque-Symfony/banque-symfony/src/Controller/ComptesController.php'|file_link(0) }}">src/Controller/ComptesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/SandBox/Banque-Symfony/banque-symfony/templates/comptes/index.html.twig'|file_link(0) }}">templates/comptes/index.html.twig</a></code></li>
-    </ul>
-</div>
+		<div class="alert alert-secondary" role="alert">
+			<h3>Résumé de votre situation</h3>
+		</div>
+		
+		<table class="table">
+			<thead class="thead-light">
+				<tr>
+					<th scope="col">Numéro de compte</th>
+					<th scope="col">Solde (en €)</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for compte in liste_des_comptes %} 
+					<tr>
+						<td>{{ compte.numero }}</td>
+						<td>{{ compte.solde }} €</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
 {% endblock %}

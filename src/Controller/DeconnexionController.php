@@ -13,8 +13,9 @@ class DeconnexionController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('deconnexion/index.html.twig', [
-            'controller_name' => 'DeconnexionController',
-        ]);
+        $session = $this->get('session');
+        $session->remove('leClient');
+        
+        return $this->forward('App\Controller\IndexController::index');
     }
 }

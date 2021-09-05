@@ -42,14 +42,14 @@ class CompteService
     
     public function rechercherComptesClient(Client $client) : array 
     {
-        $query = $this->em->getRepository('App:Compte')->createQuery-('SELECT c FROM App:Compte c WHERE c.client=:client');
-        $query->setParameter(':client', $client);
+        $query = $this->em->createQuery('SELECT c FROM App:Compte c WHERE c.client=:client');
+        $query->setParameter('client', $client);
         return $query->getResult();
     }
     
     public function rechercherComptesDebiteurs() : array 
     {
-        $query = $this->em->getRepository('App:Compte')->createQuery-('SELECT c FROM App:Compte c WHERE c.solde < 0');
+        $query = $this->em->createQuery-('SELECT c FROM App:Compte c WHERE c.solde < 0');
         return $query->getResult();
     }
 

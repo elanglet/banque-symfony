@@ -20,7 +20,8 @@ class BanqueBusiness
     {
         try {
             $client = $this->clientService->rechercherClientParId($idClient);
-            if($client != null && $motDePasse != null && $motDePasse === $client->getCodepostal()) {
+                        
+            if($client != null && $motDePasse != null && $motDePasse === $client->getMotdepasse()) {
                 return $client;
             }
             else {
@@ -36,7 +37,10 @@ class BanqueBusiness
     {
         try {
             $client = $this->clientService->rechercherClientParId($idClient);
-            return $this->compteService->rechercherComptesClient($client);
+            
+            $listeDesComptes = $this->compteService->rechercherComptesClient($client);
+            
+            return $listeDesComptes;
         }
         catch (\Exception $e) {
             throw new \Exception("Erreur de récupération des comptes.");
@@ -60,4 +64,3 @@ class BanqueBusiness
         }
     }
 }
-
