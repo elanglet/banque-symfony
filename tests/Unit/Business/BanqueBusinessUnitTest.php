@@ -1,5 +1,5 @@
 <?php
-namespace App\Tests\Business;
+namespace App\Tests\Unit\Business;
 
 use PHPUnit\Framework\TestCase;
 
